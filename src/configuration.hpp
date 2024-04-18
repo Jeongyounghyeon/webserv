@@ -76,8 +76,6 @@ class ServerConfiguration {
   const std::map<std::string, LocationConfiguration>& location() const;
   const std::string& error_page() const;
   const int& client_max_body_size() const;
-  const std::string& error_page() const;
-  const std::string& client_max_body_size() const;
   const std::string& root() const;
   const bool& auto_index() const;
   const std::string& index() const;
@@ -89,7 +87,6 @@ class ServerConfiguration {
   std::map<std::string, LocationConfiguration> location_;
   std::string error_page_;
   int client_max_body_size_;
-  std::string client_max_body_size_;
   std::string root_;
   bool auto_index_;
   std::string index_;

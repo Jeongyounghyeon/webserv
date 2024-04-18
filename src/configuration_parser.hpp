@@ -40,16 +40,17 @@ class ConfigurationParser {
 
   static int ParseServerLine(const Token& directive, const Tokens& valueTokens,
                              int& port, std::set<std::string>& server_names,
-                             std::string& error_page,
-                             int& client_max_body_size, std::string& root,
+                             std::string& error_page, int& client_max_body_size,
                              std::string& root, bool& auto_index,
                              std::string& index);
-  static int ParseLocationLine(
-      const Token& directive, const Tokens& valueTokens,
-      std::string& error_page, int& client_max_body_size,
-      std::string& root, bool& auto_index, std::string& index,
-      std::set<std::string>& allowed_method, std::string& return_uri,
-      std::string& upload_store);
+  static int ParseLocationLine(const Token& directive,
+                               const Tokens& valueTokens,
+                               std::string& error_page,
+                               int& client_max_body_size, std::string& root,
+                               bool& auto_index, std::string& index,
+                               std::set<std::string>& allowed_method,
+                               std::string& return_uri,
+                               std::string& upload_store);
 
   static int ParsePort(int& port, const Tokens& valueTokens);
   static int ParseServer_names(std::set<std::string>& server_names,
